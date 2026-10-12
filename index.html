@@ -3,37 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Go Shop - متجر إلكتروني متخصص في بيع المنتجات الحديثة والمميزة">
+    <meta name="keywords" content="متجر, تسوق, إلكتروني, منتجات, متجر إلكتروني">
     <title>Go Shop - المتجر الرسمي</title>
-    
-    <!-- شفرة Google AdSense الأساسية -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4870324877866276"
-         crossorigin="anonymous"></script>
 
-    <!-- FontAwesome الأيقونات -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4870324877866276" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        html { scroll-behavior: smooth; }
         body {
-            background-color: #030712;
+            background: #030712;
             color: #f8fafc;
             line-height: 1.6;
             position: relative;
             min-height: 100vh;
         }
 
-        /* الهيدر والعنوان */
         header {
             background: radial-gradient(circle at center, #0f172a 0%, #030712 100%);
             color: #fff;
-            padding: 50px 20px 35px 20px;
+            padding: 50px 20px 35px;
             text-align: center;
             border-bottom: 2px solid rgba(56, 189, 248, 0.2);
             position: relative;
@@ -50,7 +40,6 @@
             z-index: 0;
         }
 
-        /* الشعار الهولوغرامي */
         .hologram-wrapper {
             position: relative;
             z-index: 2;
@@ -62,13 +51,10 @@
         .hologram-card {
             background: rgba(15, 23, 42, 0.6);
             backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(56, 189, 248, 0.3);
             padding: 15px 40px;
             border-radius: 24px;
-            box-shadow: 
-                0 20px 50px rgba(0, 0, 0, 0.7),
-                inset 0 0 20px rgba(56, 189, 248, 0.1);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.7), inset 0 0 20px rgba(56, 189, 248, 0.1);
             transform-style: preserve-3d;
             animation: floatAdvanced 5s ease-in-out infinite;
         }
@@ -76,12 +62,10 @@
         .hologram-logo {
             font-size: 3.5rem;
             font-weight: 900;
-            text-transform: uppercase;
             letter-spacing: 5px;
             background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            position: relative;
             display: inline-block;
             filter: drop-shadow(0 0 25px rgba(56, 189, 248, 0.6));
             transform: translateZ(50px);
@@ -94,18 +78,9 @@
         }
 
         @keyframes floatAdvanced {
-            0% {
-                transform: translateY(0px) rotateX(12deg) rotateY(-12deg) rotateZ(0deg);
-                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(56, 189, 248, 0.3);
-            }
-            50% {
-                transform: translateY(-15px) rotateX(-12deg) rotateY(12deg) rotateZ(1deg);
-                box-shadow: 0 35px 70px rgba(0, 0, 0, 0.9), 0 0 50px rgba(192, 132, 252, 0.5);
-            }
-            100% {
-                transform: translateY(0px) rotateX(12deg) rotateY(-12deg) rotateZ(0deg);
-                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(56, 189, 248, 0.3);
-            }
+            0% { transform: translateY(0px) rotateX(12deg) rotateY(-12deg) rotateZ(0deg); box-shadow: 0 20px 50px rgba(0,0,0,0.7), 0 0 30px rgba(56,189,248,0.3); }
+            50% { transform: translateY(-15px) rotateX(-12deg) rotateY(12deg) rotateZ(1deg); box-shadow: 0 35px 70px rgba(0,0,0,0.9), 0 0 50px rgba(192,132,252,0.5); }
+            100% { transform: translateY(0px) rotateX(12deg) rotateY(-12deg) rotateZ(0deg); box-shadow: 0 20px 50px rgba(0,0,0,0.7), 0 0 30px rgba(56,189,248,0.3); }
         }
 
         header p {
@@ -116,7 +91,26 @@
             letter-spacing: 1px;
         }
 
-        /* حاوية المنتجات */
+        nav {
+            background: rgba(15, 23, 42, 0.9);
+            padding: 15px 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: #94a3b8;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover { color: #38bdf8; }
+
         .container {
             max-width: 1100px;
             margin: 30px auto;
@@ -125,13 +119,13 @@
             z-index: 2;
         }
 
-        /* إعلان أعلى المنتجات (فوق المنتج الأول مباشرة وبحجم متوسط) */
         .top-ad-section {
             max-width: 800px;
-            margin: 20px auto 30px auto;
+            margin: 20px auto 30px;
             padding: 0 15px;
             text-align: center;
         }
+
         .ad-box-medium {
             background: rgba(15, 23, 42, 0.5);
             border: 1px dashed rgba(56, 189, 248, 0.3);
@@ -146,7 +140,6 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.3);
         }
 
-        /* شبكة المنتجات (منتجان ثم إعلان متوسط) */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -155,15 +148,11 @@
         }
 
         @media (max-width: 768px) {
-            .products-grid {
-                grid-template-columns: 1fr;
-            }
-            .hologram-logo {
-                font-size: 2.5rem;
-            }
+            .products-grid { grid-template-columns: 1fr; }
+            .hologram-logo { font-size: 2.5rem; }
+            nav a { margin: 0 10px; font-size: 0.85rem; }
         }
 
-        /* بطاقة المنتج */
         .product-card {
             background: rgba(15, 23, 42, 0.7);
             backdrop-filter: blur(10px);
@@ -177,17 +166,20 @@
             transition: all 0.3s ease;
             height: 100%;
         }
+
         .product-card:hover {
             transform: translateY(-8px);
             border-color: rgba(56, 189, 248, 0.5);
             box-shadow: 0 15px 40px rgba(56, 189, 248, 0.2);
         }
+
         .product-image {
             width: 100%;
             height: 220px;
             object-fit: cover;
             background-color: #1e293b;
         }
+
         .product-info {
             padding: 20px;
             display: flex;
@@ -195,22 +187,11 @@
             flex-grow: 1;
             justify-content: space-between;
         }
-        .product-title {
-            font-size: 1.2rem;
-            margin-bottom: 8px;
-            color: #f8fafc;
-        }
-        .product-snippet {
-            font-size: 0.9rem;
-            color: #94a3b8;
-            margin-bottom: 15px;
-        }
-        .product-price {
-            font-size: 1.25rem;
-            color: #38bdf8;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
+
+        .product-title { font-size: 1.2rem; margin-bottom: 8px; color: #f8fafc; }
+        .product-snippet { font-size: 0.9rem; color: #94a3b8; margin-bottom: 15px; }
+        .product-price { font-size: 1.25rem; color: #38bdf8; font-weight: bold; margin-bottom: 15px; }
+
         .btn-details {
             background: linear-gradient(135deg, #2563eb, #38bdf8);
             color: #fff;
@@ -224,11 +205,9 @@
             transition: opacity 0.3s;
             box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
         }
-        .btn-details:hover {
-            opacity: 0.9;
-        }
 
-        /* بطاقة الإعلان المتوسطة بين المنتجات */
+        .btn-details:hover { opacity: 0.9; }
+
         .grid-ad-card {
             grid-column: span 2;
             background: rgba(15, 23, 42, 0.4);
@@ -244,11 +223,9 @@
             min-height: 140px;
             box-shadow: inset 0 0 15px rgba(56, 189, 248, 0.05);
         }
-        @media (max-width: 768px) {
-            .grid-ad-card {
-                grid-column: span 1;
-            }
-        }
+
+        @media (max-width: 768px) { .grid-ad-card { grid-column: span 1; } }
+
         .ad-label {
             font-size: 0.75rem;
             color: #64748b;
@@ -267,7 +244,14 @@
             border-top: 1px solid rgba(255,255,255,0.05);
         }
 
-        /* زر الكلافيه العائم */
+        footer a {
+            color: #38bdf8;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover { text-decoration: underline; }
+
         .floating-keyboard-btn {
             position: fixed;
             top: 50%;
@@ -288,13 +272,9 @@
             font-size: 22px;
             transition: all 0.3s ease;
         }
-        .floating-keyboard-btn:hover {
-            background-color: #2563eb;
-            color: #fff;
-            padding-left: 22px;
-        }
 
-        /* زر الصعود إلى الأعلى */
+        .floating-keyboard-btn:hover { background-color: #2563eb; color: #fff; padding-left: 22px; }
+
         .scroll-top-btn {
             position: fixed;
             bottom: 25px;
@@ -316,12 +296,9 @@
             transition: all 0.3s ease;
             border: 1px solid rgba(255,255,255,0.2);
         }
-        .scroll-top-btn.show {
-            opacity: 1;
-            visibility: visible;
-        }
 
-        /* نافذة الكلافيه السري */
+        .scroll-top-btn.show { opacity: 1; visibility: visible; }
+
         #virtualKeyboardModal {
             display: none;
             position: fixed;
@@ -333,6 +310,7 @@
             align-items: center;
             padding: 10px;
         }
+
         .keyboard-box {
             background: rgba(15, 23, 42, 0.95);
             padding: 20px 15px;
@@ -343,6 +321,7 @@
             border: 1px solid rgba(56, 189, 248, 0.3);
             position: relative;
         }
+
         .close-kb-top {
             position: absolute;
             top: 10px;
@@ -351,6 +330,7 @@
             font-size: 1.3rem;
             cursor: pointer;
         }
+
         .keyboard-display {
             width: 100%;
             padding: 10px 15px;
@@ -364,13 +344,8 @@
             font-family: monospace;
             direction: ltr;
         }
-        .keyboard-row {
-            display: flex;
-            justify-content: center;
-            gap: 4px;
-            margin-bottom: 6px;
-            width: 100%;
-        }
+
+        .keyboard-row { display: flex; justify-content: center; gap: 4px; margin-bottom: 6px; width: 100%; }
         .k-key {
             background: #1e293b;
             color: #f8fafc;
@@ -387,45 +362,22 @@
             box-shadow: 0 3px 0 #0f172a;
             min-width: 0;
         }
-        .k-key:active {
-            transform: translateY(2px);
-            box-shadow: none;
-            background: #2563eb;
-            color: #fff;
-        }
-        .k-key-special {
-            background: #334155;
-            font-size: 0.8rem;
-            flex: 1.3;
-        }
-        .k-key-space {
-            flex: 6;
-        }
-        .k-key-enter {
-            background: #2563eb;
-            color: #fff;
-            flex: 1.5;
-        }
+
+        .k-key:active { transform: translateY(2px); box-shadow: none; background: #2563eb; color: #fff; }
+        .k-key-special { background: #334155; font-size: 0.8rem; flex: 1.3; }
+        .k-key-space { flex: 6; }
+        .k-key-enter { background: #2563eb; color: #fff; flex: 1.5; }
     </style>
 </head>
 <body>
+    <div class="floating-keyboard-btn" onclick="openKeyboard()"><i class="fa-solid fa-keyboard"></i></div>
+    <div class="scroll-top-btn" id="scrollTopBtn" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></div>
 
-    <!-- زر الكلافيه العائم -->
-    <div class="floating-keyboard-btn" onclick="openKeyboard()">
-        <i class="fa-solid fa-keyboard"></i>
-    </div>
-
-    <!-- زر الصعود إلى الأعلى -->
-    <div class="scroll-top-btn" id="scrollTopBtn" onclick="scrollToTop()">
-        <i class="fa-solid fa-arrow-up"></i>
-    </div>
-
-    <!-- نافذة الكلافيه التفاعلية -->
     <div id="virtualKeyboardModal">
         <div class="keyboard-box">
             <span class="close-kb-top" onclick="closeKeyboard()"><i class="fa-solid fa-xmark"></i></span>
             <input type="password" id="kbInput" class="keyboard-display" placeholder="Keyboard Input...">
-            
+
             <div class="keyboard-row">
                 <button class="k-key" onclick="pressKey('1')">1</button>
                 <button class="k-key" onclick="pressKey('2')">2</button>
@@ -482,7 +434,6 @@
         </div>
     </div>
 
-    <!-- الهيدر مع الشعار الهولوغرامي -->
     <header>
         <div class="hologram-wrapper">
             <div class="hologram-card">
@@ -492,7 +443,14 @@
         <p>التجربة الأحدث للتسوق الرقمي العائم</p>
     </header>
 
-    <!-- الإعلان الأول: يظهر أعلى المنتجات تماماً (قبل المنتج الأول) وبحجم متوسط -->
+    <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="about.html">من نحن</a>
+        <a href="contact.html">اتصل بنا</a>
+        <a href="terms.html">الشروط والأحكام</a>
+        <a href="privacy-policy.html">سياسة الخصوصية</a>
+    </nav>
+
     <div class="top-ad-section">
         <div class="ad-box-medium">
             <ins class="adsbygoogle"
@@ -501,43 +459,36 @@
                  data-ad-slot="auto"
                  data-ad-format="auto"
                  data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
     </div>
 
-    <!-- شبكة المنتجات (منتجان ثم إعلان متوسط، منتجان ثم إعلان...) -->
     <div class="container">
         <div class="products-grid">
-            
-            <!-- المنتج 1 -->
             <div class="product-card">
-                <img src="https://via.placeholder.com/300" alt="المنتج الأول" class="product-image">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=400&fit=crop" alt="سماعات لاسلكية" class="product-image">
                 <div class="product-info">
                     <div>
-                        <h3 class="product-title">اسم المنتج الأول</h3>
-                        <p class="product-snippet">هذا هو الجزء الأول المختصر من وصف المنتج الأول...</p>
-                        <p class="product-price">199 درهم</p>
+                        <h3 class="product-title">سماعات لاسلكية Premium</h3>
+                        <p class="product-snippet">سماعات عالية الجودة مع تقنية الضوضاء النشطة وبطارية تدوم 30 ساعة.</p>
+                        <p class="product-price">299 درهم</p>
                     </div>
                     <a href="product.html?id=1" class="btn-details">شاهد التفاصيل والشراء</a>
                 </div>
             </div>
 
-            <!-- المنتج 2 -->
             <div class="product-card">
-                <img src="https://via.placeholder.com/300" alt="المنتج الثاني" class="product-image">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=400&fit=crop" alt="ساعة ذكية" class="product-image">
                 <div class="product-info">
                     <div>
-                        <h3 class="product-title">اسم المنتج الثاني</h3>
-                        <p class="product-snippet">هذا هو الجزء الأول المختصر من وصف المنتج الثاني...</p>
-                        <p class="product-price">299 درهم</p>
+                        <h3 class="product-title">ساعة ذكية متقدمة</h3>
+                        <p class="product-snippet">ساعة ذكية مع شاشة AMOLED وتتبع النشاط البدني وقياس معدل النبض.</p>
+                        <p class="product-price">399 درهم</p>
                     </div>
                     <a href="product.html?id=2" class="btn-details">شاهد التفاصيل والشراء</a>
                 </div>
             </div>
 
-            <!-- الإعلان المتوسط الأول (يظهر بعد أول منتجين) -->
             <div class="grid-ad-card">
                 <span class="ad-label">إشهار إعلاني</span>
                 <ins class="adsbygoogle"
@@ -546,38 +497,33 @@
                      data-ad-slot="auto"
                      data-ad-format="horizontal"
                      data-full-width-responsive="true"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
             </div>
 
-            <!-- المنتج 3 -->
             <div class="product-card">
-                <img src="https://via.placeholder.com/300" alt="المنتج الثالث" class="product-image">
+                <img src="https://images.unsplash.com/photo-1586253408029-01e839ef0d3c?w=500&h=400&fit=crop" alt="كاميرا ويب" class="product-image">
                 <div class="product-info">
                     <div>
-                        <h3 class="product-title">اسم المنتج الثالث</h3>
-                        <p class="product-snippet">هذا هو الجزء الأول المختصر من وصف المنتج الثالث...</p>
-                        <p class="product-price">399 درهم</p>
+                        <h3 class="product-title">كاميرا ويب 4K</h3>
+                        <p class="product-snippet">كاميرا ويب عالية الدقة مع ميكروفون مزدوج وتركيز تلقائي وتسجيل واضح.</p>
+                        <p class="product-price">199 درهم</p>
                     </div>
                     <a href="product.html?id=3" class="btn-details">شاهد التفاصيل والشراء</a>
                 </div>
             </div>
 
-            <!-- المنتج 4 -->
             <div class="product-card">
-                <img src="https://via.placeholder.com/300" alt="المنتج الرابع" class="product-image">
+                <img src="https://images.unsplash.com/photo-1505576399279-565b52ce32f0?w=500&h=400&fit=crop" alt="لوحة مفاتيح" class="product-image">
                 <div class="product-info">
                     <div>
-                        <h3 class="product-title">اسم المنتج الرابع</h3>
-                        <p class="product-snippet">هذا هو الجزء الأول المختصر من وصف المنتج الرابع...</p>
-                        <p class="product-price">149 درهم</p>
+                        <h3 class="product-title">لوحة مفاتيح ميكانيكية</h3>
+                        <p class="product-snippet">لوحة مفاتيح ميكانيكية RGB بتصميم مريح وأداء سريع ومريح للاستخدام اليومي.</p>
+                        <p class="product-price">249 درهم</p>
                     </div>
                     <a href="product.html?id=4" class="btn-details">شاهد التفاصيل والشراء</a>
                 </div>
             </div>
 
-            <!-- الإعلان المتوسط الثاني (يظهر بعد المنتجين التاليين) -->
             <div class="grid-ad-card">
                 <span class="ad-label">إشهار إعلاني</span>
                 <ins class="adsbygoogle"
@@ -586,31 +532,53 @@
                      data-ad-slot="auto"
                      data-ad-format="horizontal"
                      data-full-width-responsive="true"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
             </div>
 
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500&h=400&fit=crop" alt="نظارات ذكية" class="product-image">
+                <div class="product-info">
+                    <div>
+                        <h3 class="product-title">نظارات ذكية</h3>
+                        <p class="product-snippet">نظارات ذكية مع شاشة حقيقية وعرض الواقع المعزز وتصميم أنيق ومريح.</p>
+                        <p class="product-price">599 درهم</p>
+                    </div>
+                    <a href="product.html?id=5" class="btn-details">شاهد التفاصيل والشراء</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=500&h=400&fit=crop" alt="ماوس لاسلكي" class="product-image">
+                <div class="product-info">
+                    <div>
+                        <h3 class="product-title">ماوس لاسلكي دقيق</h3>
+                        <p class="product-snippet">ماوس لاسلكي يعمل مع سرعة استجابة فائقة ومتانة عالية وتجربة استخدام ممتازة.</p>
+                        <p class="product-price">89 درهم</p>
+                    </div>
+                    <a href="product.html?id=6" class="btn-details">شاهد التفاصيل والشراء</a>
+                </div>
+            </div>
         </div>
     </div>
 
     <footer>
         <p>جميع الحقوق محفوظة &copy; Go Shop 2026</p>
+        <div>
+            <a href="privacy-policy.html">سياسة الخصوصية</a> |
+            <a href="terms.html">الشروط والأحكام</a> |
+            <a href="contact.html">اتصل بنا</a> |
+            <a href="about.html">من نحن</a>
+        </div>
     </footer>
 
     <script>
         const scrollTopBtn = document.getElementById('scrollTopBtn');
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 200) {
-                scrollTopBtn.classList.add('show');
-            } else {
-                scrollTopBtn.classList.remove('show');
-            }
+            if (window.scrollY > 200) scrollTopBtn.classList.add('show');
+            else scrollTopBtn.classList.remove('show');
         });
 
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+        function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
 
         const SECRET_CODE = "19980606";
 
@@ -620,9 +588,7 @@
             document.getElementById('kbInput').focus();
         }
 
-        function closeKeyboard() {
-            document.getElementById('virtualKeyboardModal').style.display = 'none';
-        }
+        function closeKeyboard() { document.getElementById('virtualKeyboardModal').style.display = 'none'; }
 
         function pressKey(char) {
             const input = document.getElementById('kbInput');
@@ -630,9 +596,7 @@
             checkCodeAuto(input.value);
         }
 
-        function clearKey() {
-            document.getElementById('kbInput').value = '';
-        }
+        function clearKey() { document.getElementById('kbInput').value = ''; }
 
         function backspaceKey() {
             const input = document.getElementById('kbInput');
@@ -662,11 +626,8 @@
         });
 
         document.getElementById('kbInput').addEventListener('keyup', function(e) {
-            if (e.key === 'Enter') {
-                checkCodeAndSubmit();
-            } else {
-                checkCodeAuto(this.value);
-            }
+            if (e.key === 'Enter') checkCodeAndSubmit();
+            else checkCodeAuto(this.value);
         });
     </script>
 </body>
